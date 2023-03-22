@@ -1,4 +1,4 @@
-var haslo = "HASŁO HASŁO MASŁO TASAKI MAZAKI PISAKI";
+var haslo = "HASŁO HASŁO ";
 haslo = haslo.toUpperCase();
 
 var dlugosc = haslo.length;
