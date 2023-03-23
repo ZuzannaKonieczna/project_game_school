@@ -1,4 +1,7 @@
-var haslo = "HASŁO HASŁO ";
+let pojecia = ["algorytm","aplikacja", "archiwum"];
+
+var i = Math.floor(Math.random()*2+0)
+var haslo = pojecia[i];
 haslo = haslo.toUpperCase();
 
 var dlugosc = haslo.length;
