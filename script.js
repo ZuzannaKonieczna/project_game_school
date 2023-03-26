@@ -1,5 +1,7 @@
 let pojecia = ["algorytm","aplikacja", "archiwum"];
 
+let definicja = ["ciąg ściśle określonych działań wykonywanych w ustalonej kolejności ciąg ściśle określonych działań wykonywanych w ustalonej kolejność" , "program komputerowy wykonujący konkretne zadania. Przykładem aplikacji jest edytor tekstu, program graficzny, arkusz kalkulacyjny czy też gra komputerowa. Aplikacją nie jest system operacyjny." , " plik otrzymany w wyniku kompresji danych. " ]
+
 var i = Math.floor(Math.random()*2+0)
 var haslo = pojecia[i];
 haslo = haslo.toUpperCase();
@@ -25,43 +27,10 @@ function wypisz_haslo()
 
 window.onload = start;
 
-var litery = new Array(35);
+var litery = ["A","Ą","B","C","D","E","Ę", "F","G", "H","I","J","K","L","Ł","M","N","Ń","O","Ó","P", "Q","R", "S", "Ś", "Ś", "T", "U", "V", "W", "X", "Y","Z", "Ź" , "Ż"]
 
-litery[0] = "A";
-litery[1] = "Ą";
-litery[2] = "B";
-litery[3] = "C";
-litery[4] = "Ć";
-litery[5] = "D";
-litery[6] = "E";
-litery[7] = "Ę";
-litery[8] = "F";
-litery[9] = "G";
-litery[10] = "H";
-litery[11] = "I";
-litery[12] = "J";
-litery[13] = "K";
-litery[14] = "L";
-litery[15] = "Ł";
-litery[16] = "M";
-litery[17] = "N";
-litery[18] = "Ń";
-litery[19] = "O";
-litery[20] = "Ó";
-litery[21] = "P";
-litery[22] = "Q";
-litery[23] = "R";
-litery[24] = "S";
-litery[25] = "Ś";
-litery[26] = "T";
-litery[27] = "U";
-litery[28] = "V";
-litery[29] = "W";
-litery[30] = "X";
-litery[31] = "Y";
-litery[32] = "Z";
-litery[33] = "Ż";
-litery[34] = "Ź";
+
+
 
 
 
@@ -133,8 +102,12 @@ function sprawdz(nr)
 	
 	//wygrana
 	if (haslo == haslo1)
-	document.getElementById("alfabet").innerHTML  = "Tak jest! Podano prawidłowe hasło: "+haslo+'<br /><br /><span class="reset" onclick="location.reload()">JESZCZE RAZ?</span>';
-	
+	var i;
+	while (pojecia[i]){
+		if(haslo == pojecia[i]){	
+		document.getElementById("alfabet").innerHTML  = "Tak jest! Podano prawidłowe hasło: "+haslo+ definicia[i]+'<br /><br /><span class="reset" onclick="location.reload()">JESZCZE RAZ?</span>' ;
+		}
+	}
 	//przegrana
 	if (ile_skuch>=9)
 	document.getElementById("alfabet").innerHTML  = "Przegrana! Prawidłowe hasło: "+haslo+'<br /><br /><span class="reset" onclick="location.reload()">JESZCZE RAZ?</span>';
