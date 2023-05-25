@@ -1,8 +1,6 @@
-let pojecia = ["algorytm","aplikacja", "archiwum"];
+let pojecia = ["algorytm","aplikacja", "archiwum","adware","bajt","bios","bit","czat"];
 
-let definicja = ["ciąg ściśle określonych działań wykonywanych w ustalonej kolejności ciąg ściśle określonych działań wykonywanych w ustalonej kolejność" , "program komputerowy wykonujący konkretne zadania. Przykładem aplikacji jest edytor tekstu, program graficzny, arkusz kalkulacyjny czy też gra komputerowa. Aplikacją nie jest system operacyjny." , " plik otrzymany w wyniku kompresji danych. " ]
-
-var i = Math.floor(Math.random()*2+0)
+var i = Math.floor(Math.random()*7+0)
 var haslo = pojecia[i];
 haslo = haslo.toUpperCase();
 
@@ -102,12 +100,8 @@ function sprawdz(nr)
 	
 	//wygrana
 	if (haslo == haslo1)
-	var i;
-	while (pojecia[i]){
-		if(haslo == pojecia[i]){	
-		document.getElementById("alfabet").innerHTML  = "Tak jest! Podano prawidłowe hasło: "+haslo+ definicia[i]+'<br /><br /><span class="reset" onclick="location.reload()">JESZCZE RAZ?</span>' ;
-		}
-	}
+		document.getElementById("alfabet").innerHTML  = "Tak jest! Podano prawidłowe hasło: "+haslo+'<br /><br /><span class="reset" onclick="location.reload()">JESZCZE RAZ?</span>' ;
+	
 	//przegrana
 	if (ile_skuch>=9)
 	document.getElementById("alfabet").innerHTML  = "Przegrana! Prawidłowe hasło: "+haslo+'<br /><br /><span class="reset" onclick="location.reload()">JESZCZE RAZ?</span>';
